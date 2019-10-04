@@ -5,8 +5,8 @@
 replicaCount: 1
 
 image:
-  repository: nginx
-  tag: stable
+  repository: tomcat
+  tag: 9.0.26-jdk13-openjdk-oracle
   pullPolicy: IfNotPresent
 
 imagePullSecrets: []

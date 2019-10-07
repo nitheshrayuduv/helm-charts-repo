@@ -3,11 +3,11 @@ entries:
   tomcat:
   - apiVersion: v1
     appVersion: 9.0.26
-    created: "2019-10-04T09:13:03.111801879Z"
+    created: "2019-10-07T01:27:12.065884462Z"
     description: A Helm chart for Tomcat 9 (with Oracle openjdk13)
-    digest: 03cf9bb65d0f734814bcc789126aa7c8072cff9ef1de2662da8c4bfd55540462
+    digest: 2badee2178f83d2fcaa47ad3a567d5bf0e5cc40cb21aa6e3caa07e6402953389
     name: tomcat
     urls:
-    - tomcat-0.1.0.tgz
-    version: 0.1.0
-generated: "2019-10-04T09:13:03.110952168Z"
+    - tomcat-0.1.1.tgz
+    version: 0.1.1
+generated: "2019-10-07T01:27:12.064669071Z"

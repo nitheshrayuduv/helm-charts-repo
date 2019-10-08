@@ -26,11 +26,9 @@ spec:
     - host: {{ .host | quote }}
       http:
         paths:
-        {{- range .paths }}
-          - path: {{ . }}
-            backend:
+          - backend:
               serviceName: {{ $fullName }}
-              servicePort: http
+              servicePort: 8080
         {{- end }}
   {{- end }}
 {{- end }}

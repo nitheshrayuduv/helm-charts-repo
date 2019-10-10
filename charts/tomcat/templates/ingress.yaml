@@ -5,10 +5,10 @@ kind: Ingress
 metadata:
   name: {{ $fullName }}
   labels:
-{{ include "tomcat.labels" . | indent 4 }}
+{{ include "tomcat.labels" . | indent 2 }}
   {{- with .Values.ingress.annotations }}
   annotations:
-    {{- toYaml . | nindent 4 }}
+    {{- toYaml . | nindent 2 }}
   {{- end }}
 spec:
 {{- if .Values.ingress.tls }}
@@ -21,13 +21,15 @@ spec:
       secretName: {{ .secretName }}
   {{- end }}
 {{- end }}
+{{- if .Values.ingress.hosts }}
   rules:
   {{- range .Values.ingress.hosts }}
-    - host: {{ .host | quote }}
-      http:
-        paths:
-          - backend:
-              serviceName: {{ $fullName }}
-              servicePort: 8080
+  - host: {{ .host }}
+    http:
+      paths:
+      - backend:
+          serviceName: {{ $fullName }}
+          servicePort: 8080
   {{- end }}
+{{- end }}
 {{- end }}

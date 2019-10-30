@@ -32,7 +32,7 @@ ingress:
   tls:
     - hosts:
       - hung-from-hongkong.asuscomm.com
-      secretName: letsencrypt-prod
+      secretName: tomcat-acme-prod
   #  - secretName: chart-example-tls
   #    hosts:
   #      - chart-example.local

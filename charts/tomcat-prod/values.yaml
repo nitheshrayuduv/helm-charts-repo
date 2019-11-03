@@ -20,10 +20,10 @@ service:
 
 ingress:
   enabled: true
-  annotations: {
-    kubernetes.io/ingress.class: "tomcat",
-    cert-manager.io/cluster-issuer: "letsencrypt-prod"
-  }
+  annotations: {}
+    #kubernetes.io/ingress.class: "tomcat",
+    #cert-manager.io/cluster-issuer: "letsencrypt-prod"
+  #}
     # kubernetes.io/tls-acme: "true"
   hosts:
     - host: hung-from-hongkong.asuscomm.com
